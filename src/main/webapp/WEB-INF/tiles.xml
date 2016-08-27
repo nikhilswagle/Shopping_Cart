@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	
+	<definition name="baseLayout" template="/WEB-INF/jsp/layout/main.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/jsp/sections/header.jsp" />
+		<put-attribute name="navbar" value="/WEB-INF/jsp/sections/navbar.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/jsp/sections/sidebar.jsp" />
+		<put-attribute name="content" value="" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/sections/footer.jsp" />
+	</definition>
+	
+	<definition name="login" extends="baseLayout">
+		<put-attribute name="title" value="Shopping Cart Login" />
+		<put-attribute name="content" value="/WEB-INF/jsp/content/login.jsp" />
+	</definition>
+	
+	<definition name="displayCategories" extends="baseLayout">
+		<put-attribute name="title" value="Product Categories" />
+		<put-attribute name="content" value="/WEB-INF/jsp/content/displayCategories.jsp" />
+	</definition>
+	
+	<definition name="showProducts" extends="baseLayout">
+		<put-attribute name="title" value="Products" />
+		<put-attribute name="content" value="/WEB-INF/jsp/content/showProducts.jsp" />
+	</definition>
+	
+	<definition name="viewProductDetails" extends="baseLayout">
+		<put-attribute name="title" value="Product Details" />
+		<put-attribute name="content" value="/WEB-INF/jsp/content/viewProductDetails.jsp" />
+	</definition>
+	
+	<definition name="showCart" extends="baseLayout">
+		<put-attribute name="title" value="Cart" />
+		<put-attribute name="content" value="/WEB-INF/jsp/content/showCart.jsp" />
+	</definition>
+	
+</tiles-definitions>
